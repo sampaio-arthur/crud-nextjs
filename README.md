@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRUD em Next.js
 
-## Getting Started
+## Descrição
 
-First, run the development server:
+Este é um projeto CRUD simples desenvolvido com **Next.js**, **React**, **TypeScript**, **Prisma** e **SQLite**. A aplicação permite a criação, leitura, atualização e exclusão de dados, proporcionando uma interface amigável e interativa para o usuário.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework React para desenvolvimento de aplicações web.
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **TypeScript**: Superset de JavaScript que adiciona tipagem estática.
+- **Prisma**: ORM (Object-Relational Mapping) para interação com o banco de dados.
+- **SQLite**: Banco de dados leve e fácil de configurar.
+- **jsonwebtoken**: Biblioteca para implementar JWT (JSON Web Tokens) para autenticação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Cadastro de Usuários**: Permite aos usuários criar uma conta.
+- **Login de Usuários**: Sistema de autenticação com JWT.
+- **Dashboard**: Interface para visualizar e gerenciar dados.
+- **Efeitos Visuais**: Animações e transições para uma melhor experiência do usuário.
 
-## Learn More
+## Instalação
 
-To learn more about Next.js, take a look at the following resources:
+Siga os passos abaixo para instalar e executar o projeto localmente:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone o repositório**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/sampaio-arthur/crud-nextjs.git
+   cd crud-nextjs
 
-## Deploy on Vercel
+2. **Instale as dependências principais**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Instale o Prisma e SQLite**:
+
+    ```bash
+    npm install prisma --save-dev
+    npm install @prisma/client
+    npm install sqlite3
+
+4. **Instale a biblioteca JWT**:
+
+    ```bash
+    npm install jsonwebtoken
+
+5. **Configure o banco de dados**:
+
+    ```bash
+    npx prisma generate
+
+6. **Execute as migrações para criar as tabelas no banco de dados**:
+
+    ```bash
+    npx prisma migrate dev --name init
+
+7. **Execute as migrações para criar as tabelas no banco de dados**:
+
+    ```bash
+    npm run dev
