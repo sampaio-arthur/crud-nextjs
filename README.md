@@ -60,4 +60,11 @@ Siga os passos abaixo para instalar e executar o projeto localmente:
 7. **Execute as migrações para criar as tabelas no banco de dados**:
 
     ```bash
+    DATABASE_URL="file:./dev.db"
+    JWT_SECRET="sua_chave_secreta_aqui"
+
+
+8. **Execute o projeto**:
+
+    ```bash
     npm run dev
